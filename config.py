@@ -3,7 +3,7 @@ import os
 
 class Config:
     SECRET_KEY = 'a random string'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:eve@localhost/ablog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:eve@localhost/ablogs'
     QUOTE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -23,7 +23,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:eve@localhost/ablog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:eve@localhost/ablogs'
     
     DEBUG = True
 
