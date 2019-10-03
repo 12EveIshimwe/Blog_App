@@ -43,4 +43,5 @@ None
 ## License
 Copyright (c) 2019 Evelyne N. Ishimwe 
 
-# Blog_App
+
+# Blogs_App
