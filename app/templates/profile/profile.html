@@ -11,7 +11,7 @@
       {% if user.profile_pic_path %}
       <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
       {%else%}
-      <p>No profile picture</p>
+      <p>No profile</p>
       {% endif %}
     </div>
     <!-- displaying  Username-->
@@ -46,9 +46,9 @@
 
 {% endblock %}
 
-           <!-- <a href="{{url_for('main.update_blog',blog_id = blog.id)}}">Update blog</a> -->
-        <!-- <form action="{{ url_for('main.delete_blog', blog_id=blog.id) }}" method="POST"> -->
-          <!-- <div class="container card">
+           <a href="{{url_for('main.update_blog',blog_id = blog.id)}}">Update blog</a> -->
+        <form action="{{ url_for('main.delete_blog', blog_id=blog.id) }}" method="POST">
+          <!-- <!-- <div class="container card"> -->
             <h4 class="card-header">Your Blogs</h4>
             <ul>
                  {% for blog in blog_category %}
@@ -56,4 +56,4 @@
                     <input class="btn btn-danger" type="submit" value="Delete">
                  {% endfor %}
             </ul>
-          </div> -->
+          </div>
